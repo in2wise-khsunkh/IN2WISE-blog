@@ -11,6 +11,7 @@ export GITLAB_HOME=$HOME/gitlab
 sudo docker run --detach \
   --hostname gitlab.example.com \
   --publish 443:443 --publish 80:80 --publish 22:22 \
+  --env GITLAB_OMNIBUS_CONFIG="external_url 'http://gitlab.company.com'" \
   --name gitlab \
   --restart always \
   --volume $GITLAB_HOME/config:/etc/gitlab \
