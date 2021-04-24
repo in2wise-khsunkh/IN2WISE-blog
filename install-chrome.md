@@ -16,4 +16,8 @@ sudo apt-get update
 sudo apt-get install google-chrome-stable
 ```
 
-
+### optional
+패키지 리스트 파일 
+```sh
+sudo rm -rf /etc/apt/sources.list.d/google.list
+```
