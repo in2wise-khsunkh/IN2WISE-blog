@@ -32,6 +32,7 @@ sudo docker volume create --name data
 sudo docker run --detach \
   --hostname gitlab.example.com \
   --publish 443:443 --publish 80:80 --publish 22:22 \
+  --env GITLAB_OMNIBUS_CONFIG="external_url 'http://gitlab.company.com'" \
   --name gitlab \
   --restart always \
   --volume config:/etc/gitlab \
@@ -41,9 +42,9 @@ sudo docker run --detach \
 ```
 
 ### option
---hostname <url>
---hostname <ip>
---hostname <ip:port>
+--hostname <홈페이지 이름?>
+
+--env GITLAB_OMNIBUS_CONFIG="external_url 'http://gitlab.company.com'" \ -> http://<ip주소 또는 도메인>을 외부 URL로하는 OMNIBUS 설정 값으로 환경을 
 
 --publish <외부port:내부port>
 
